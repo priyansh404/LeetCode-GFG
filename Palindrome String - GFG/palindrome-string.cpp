@@ -12,13 +12,14 @@ public:
 	
 	int isPalindrome(string S)
 	{
-	    int size = S.length();
-	    for(int i = 0; i<size/2; i++){
-	        if(S[i] != S[size - i - 1]){
-	            return 0;
-	        }
-	    }
-	    return 1;
+	    string R = S;
+	    reverse(R.begin(), R.end());
+        if(S == R){
+            return 1;
+        }	    
+        else{
+            return 0;
+        }
 	}
 
 };
